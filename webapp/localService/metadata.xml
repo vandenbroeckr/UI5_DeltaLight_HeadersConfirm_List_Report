@@ -1,0 +1,23 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZMM_PO_HEADERS_CONFIRMATIONS_SRV" xml:lang="en"
+			sap:schema-version="1">
+			<EntityType Name="ZC_PO_Header_confirms_alvlistType" sap:label="The alv list of the zc_po_header_confirmation" sap:content-version="1">
+				<Key><PropertyRef Name="Purchase_order"/><PropertyRef Name="Purchase_order_item"/></Key><Property Name="Purchase_order" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Purchase order"
+					sap:quickinfo="Purchasing Document Number"/><Property Name="Purchase_order_item" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="NonNegative"
+					sap:label="Purchase order item" sap:quickinfo="Item Number of Purchasing Document"/><Property Name="Schedule_line" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Schedule line"
+					sap:quickinfo="Delivery Schedule Line Counter"/><Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant"/><Property Name="Vendor" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Vendor"
+					sap:quickinfo="Vendor's account number"/><Property Name="Vendor_name" Type="Edm.String" MaxLength="35" sap:label="Vendor name" sap:quickinfo="Name 1"/><Property Name="Purchase_organization" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Purchase organization"
+					sap:quickinfo="Purchasing organization"/><Property Name="Purchasing_group" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Purchasing group"
+					sap:quickinfo="Purchasing Group"/><Property Name="Purchase_order_date" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Purchase order date"
+					sap:quickinfo="Purchasing Document Date"/><Property Name="Material" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material"
+					sap:quickinfo="Material Number"/><Property Name="Material_group" Type="Edm.String" MaxLength="9" sap:display-format="UpperCase" sap:label="Material group"
+					sap:quickinfo="Material Group"/><Property Name="Material_Description" Type="Edm.String" MaxLength="40" sap:label="Material description"/><Property Name="Delivery_date" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Delivery date"
+					sap:quickinfo="Item delivery date"/><Property Name="Quantity" Type="Edm.Decimal" Precision="14" Scale="3" sap:label="Quantity"/><Property Name="Reference" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Reference"/><Property Name="Status" Type="Edm.String" MaxLength="13" sap:display-format="UpperCase" sap:label="Status"/><Property Name="Promised_delivery_date" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Promised delivery date"/></EntityType>
+			<EntityContainer Name="ZMM_PO_HEADERS_CONFIRMATIONS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ZC_PO_Header_confirms_alvlist" EntityType="ZMM_PO_HEADERS_CONFIRMATIONS_SRV.ZC_PO_Header_confirms_alvlistType"
+				sap:creatable="false" sap:deletable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZMM_PO_HEADERS_CONFIRMATIONS_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZMM_PO_HEADERS_CONFIRMATIONS_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

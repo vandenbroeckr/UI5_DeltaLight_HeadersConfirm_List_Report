@@ -1,0 +1,63 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zmm_po_headers_confirmations_srv/$metadata"><edmx:Include Namespace="ZMM_PO_HEADERS_CONFIRMATIONS_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zmm_po_headers_confirma_anno_mdl.v1">
+			<Annotations Target="ZMM_PO_HEADERS_CONFIRMATIONS_SRV.ZC_PO_Header_confirms_alvlistType">
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Header Confirmations"/><PropertyValue Property="TypeNamePlural" String="Header Confirmations"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" String="">
+									<Annotation Term="Core.Messages">
+										<Collection>
+											<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/><PropertyValue Property="message"
+												String="Property 'HeaderConfirmations' of annotation 'UI.HEADERINFO.TITLE' in proj./view 'ZC_PO_Header_confirms_alvlist' not found"/><PropertyValue Property="severity" String="error"/></Record>
+										</Collection>
+									</Annotation>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Purchase_order"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Purchase_order_item"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Schedule_line"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Plant"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Vendor"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Vendor_name"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Purchase_organization"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Purchasing_group"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Purchase_order_date"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Material"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Material_group"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Material_Description"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Delivery_date"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Quantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Reference"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Status"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="Promised_delivery_date"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>Purchase_order</PropertyPath>
+						<PropertyPath>Plant</PropertyPath>
+						<PropertyPath>Vendor</PropertyPath>
+						<PropertyPath>Purchase_organization</PropertyPath>
+						<PropertyPath>Purchasing_group</PropertyPath>
+						<PropertyPath>Purchase_order_date</PropertyPath>
+						<PropertyPath>Material</PropertyPath>
+						<PropertyPath>Material_group</PropertyPath>
+						<PropertyPath>Delivery_date</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
